@@ -12,64 +12,87 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            background-color: #f0f8ff;
         }
 
         nav {
-            background-color: #2c6cbf;
+            background-color: #1a4f8b;
             padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #2c6cbf;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            margin-bottom: 100px; /* Prevent footer overlap */
         }
 
         .hero-section {
             text-align: center;
-            padding: 50px 0;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf') center/cover;
+            color: white;
+            margin-bottom: 40px;
         }
 
         .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin: 40px 0;
         }
 
         .image-gallery img {
-            max-width: 400px;
-            height: auto;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            margin: 40px 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         footer {
-            background-color: #2c6cbf;
+            background-color: #1a4f8b;
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1.5rem;
+            position: relative;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -78,25 +101,36 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="why-save.html">Why Save Water?</a></li>
+            <li><a href="tips.html">Conservation Tips</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section class="hero-section">
             <h1>Save Water, Save Life</h1>
-            <p>Water is precious - every drop counts. Learn how you can contribute to water conservation.</p>
+            <p>Preserve our planet's most precious resource for future generations</p>
         </section>
 
+        <div class="content-section">
+            <h2>Water Conservation in Action</h2>
+            <p>Discover practical ways to reduce water waste and protect our environment.</p>
+        </div>
+
         <div class="image-gallery">
-            <img src="https://picsum.photos/400/300?grayscale&blur=2" alt="Water conservation illustration 1">
-            <img src="https://picsum.photos/401/300?grayscale&blur=2" alt="Water conservation illustration 2">
-            <img src="https://picsum.photos/402/300?grayscale&blur=2" alt="Water conservation methods">
-            <img src="https://picsum.photos/403/300?grayscale&blur=2" alt="Save water infographic">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="Water conservation installation">
+            <img src="https://images.unsplash.com/photo-1551085254-e96b210db58a" alt="Person saving water">
+            <img src="https://images.unsplash.com/photo-1624552184280-9e9631bbeee9" alt="Drought-affected landscape">
+            <img src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8e" alt="Water saving infographic">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="Smart irrigation system">
+            <img src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf" alt="Community water conservation">
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 H2O Conservation Awareness. All rights reserved.</p>
+        <p>Join the movement for sustainable water use</p>
     </footer>
 </body>
 </html>
