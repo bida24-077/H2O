@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Water</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #e0f7fa;
+      color: #004d40;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #b2ebf2;
+      padding: 10px 0;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #004d40;
+      font-weight: bold;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+      background-color: #4dd0e1;
+      border-radius: 5px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Water</h1>
+    <p>Explore the science, importance, and conservation of water</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('importance')">Importance</button>
+    <button class="tab-button" onclick="showTab('cycle')">Water Cycle</button>
+    <button class="tab-button" onclick="showTab('conservation')">Conservation</button>
+  </div>
+
+  <div id="importance" class="tab-content active">
+    <h2>Why Water is Important</h2>
+    <p>Water is essential for all known forms of life. It makes up about 60% of the human body and is crucial for digestion, temperature regulation, and cellular function. Plants need water for photosynthesis, and animals rely on it for hydration and habitat.</p>
+  </div>
+
+  <div id="cycle" class="tab-content">
+    <h2>The Water Cycle</h2>
+    <p>The water cycle describes how water moves through the environment. It includes processes like evaporation, condensation, precipitation, and collection. This cycle helps distribute water across the planet and supports ecosystems.</p>
+  </div>
+
+  <div id="conservation" class="tab-content">
+    <h2>Water Conservation</h2>
+    <p>Conserving water helps ensure a sustainable future. Simple actions like fixing leaks, using water-efficient appliances, and reducing outdoor water use can make a big difference. Education and awareness are key to protecting this vital resource.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Water World. All rights reserved.
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      contents.forEach(content => {
+        content.classList.remove('active');
+      });
+
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
